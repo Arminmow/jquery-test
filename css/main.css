@@ -1,0 +1,243 @@
+/* PRELOADER */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+    overflow: hidden;
+    background: black;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #cc1616;
+    border-top-color: #efefef;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ------------------- */
+
+
+.top{
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+}
+
+.top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background: #850909;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.top i:hover {
+    background: #cd1066;
+    color: #fff;
+}
+
+
+
+
+
+body {
+    background-color: rgba(33, 28, 28, 0.9);
+}
+
+.headerNavbar {
+    padding: 20px 100px;
+    transition: 0.6s;
+    z-index: 10000;
+}
+
+.navbar-brand {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    margin-left: 1%;
+}
+.navbar-brand:hover{
+    cursor: pointer;
+    font-weight: 1200;
+    color: lightgray;
+    transition: 0.2s;
+    letter-spacing: 10px;
+
+}
+
+.nav-link {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.nav-active {
+    color: red !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+.nav-link:hover {
+    font-weight: 1000;
+    color: lightgray;
+    transition: 0.2s;
+}
+
+.sticky {
+    background-color: black;
+    padding: 5px 100px;
+
+}
+
+.sticky ul li a {
+
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-caption {
+    margin-bottom: 42vh;
+}
+.carousel-caption h1 {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+.carousel-caption p {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.mobileimage {
+    display: none;
+}
+
+#about {
+    width: 100%;
+    height: 65vh;
+    background-color: #fff;
+    padding: 230px 0;
+}
+#about h6 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+#about h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 350;
+    letter-spacing: 5px;
+    margin-top: 15px;
+}
+#about p {
+    text-align: center;
+    padding: 0 130px;
+    margin-top: 35px;
+}
+
+@media screen and (max-width: 400px) {
+    .headerNavbar {
+
+        padding: 0 10px;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0,0,0, 0.8);
+        padding: 20px;
+        border-radius: 50px;
+    }
+    .sticky .navbar-collapse {
+        background-color: black;
+        transition: 0.6s;
+    }
+    .sticky {
+        padding: 5px 20px;
+    }
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+    }
+    .carousel-caption {
+        margin-bottom: 35vh;
+    }
+    .carousel-caption h1 {
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    .carousel-caption p {
+        font-weight: 300;
+        font-size: 13px;
+    }
+    .desktopimage {
+        display: none;
+    }
+    .mobileimage {
+        display: block;
+        object-fit: cover;
+    }
+    #about p {
+        padding: 0;
+        margin-top: 35px;
+        font-size: 12px;
+    }
+    #about h2 {
+        font-size: 38px;
+        margin-top: 30px;
+    }
+    #about h6 {
+        font-size: 10px;
+        margin-top: 70px;
+    }
+    #about {
+        padding: 35px;
+    }
+
+}
